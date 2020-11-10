@@ -6,6 +6,9 @@ setup(
     install_requires=["streamz>=0.6.1"],
     packages=find_packages(),
     entry_points={
-        "streamz.plugins": ["from_iterable = streamz_example_plugin:from_iterable"]
+        "streamz.sources": [
+            "from_iterable = streamz_example_plugin.sources:from_iterable"
+        ],
+        "streamz.nodes": ["repeat = streamz_example_plugin.nodes:repeat"],
     },
 )

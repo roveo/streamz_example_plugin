@@ -1,6 +1,5 @@
 import time
 
-import streamz_plugin  # noqa: F401
 from streamz import Stream
 
 
@@ -13,3 +12,10 @@ def test_from_iterable():
     time.sleep(0.01)
 
     assert L == list(range(10))
+
+
+def test_repeat():
+    stream = Stream.from_iterable(range(2)).repeat(2)
+    L = stream.sink_to_list()
+
+    assert L == [0, 0, 1, 1]
