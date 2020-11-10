@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="streamz_example_plugin",
     version="0.0.1",
-    install_requires=["streamz>=0.6.1"],
+    install_requires=["streamz @ git+https://github.com/roveo/streamz.git@plugins"],
     packages=find_packages(),
     entry_points={
         "streamz.sources": [
