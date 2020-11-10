@@ -8,6 +8,6 @@ class repeat(Stream):
         self.n = n
 
     @gen.coroutine
-    def update(self, x, metadata=None):
+    def update(self, x, metadata=None, who=None):
         for _ in range(self.n):
             yield self._emit(x, metadata=metadata)
