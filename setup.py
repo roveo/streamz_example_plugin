@@ -10,5 +10,6 @@ setup(
             "from_iterable = streamz_example_plugin.sources:from_iterable"
         ],
         "streamz.nodes": ["repeat = streamz_example_plugin.nodes:repeat"],
+        "streamz.sinks": ["sink_to_set = streamz_example_plugin.sinks:sink_to_set"],
     },
 )
